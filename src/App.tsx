@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import { DURATION, MENU_WIDTH, SideMenu } from "./components/side-menu";
 import { useState } from "react";
-import { Button, Container } from "@chakra-ui/react";
 
 function App() {
   const [isOpen1, setIsOpen1] = useState(false);
@@ -26,7 +25,7 @@ function App() {
   };
 
   return (
-    <Container>
+    <div>
       <h1>スライドメニューの正しいCSS</h1>
       <p>スライドするサイドメニューを実装するCSSを考えてください。</p>
       <p>
@@ -47,8 +46,8 @@ function App() {
           }
         }
       >
-        <Button onClick={() => handleClick1()}>position</Button>
-        <Button onClick={() => handleClick2()}>translate</Button>
+        <button onClick={() => handleClick1()}>position</button>
+        <button onClick={() => handleClick2()}>translate</button>
         <SideMenu
           slideCss={css({
             right: isOpen1 ? 0 : -MENU_WIDTH,
@@ -61,7 +60,7 @@ function App() {
           })}
         />
       </div>
-    </Container>
+    </div>
   );
 }
 
