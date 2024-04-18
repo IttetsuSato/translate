@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from "react";
 import { SerializedStyles, css } from "@emotion/react";
 
 export const MENU_WIDTH = 600;
-export const DURATION = 400;
+export const DURATION = 500;
 
 type SideMenuProps = {
   slideCss: SerializedStyles;
@@ -14,7 +14,8 @@ export const SideMenu: FC<PropsWithChildren<SideMenuProps>> = ({
 }) => {
   const wrapperStyle = css([
     {
-      width: MENU_WIDTH,
+      width: "100%",
+      maxWidth: MENU_WIDTH,
       height: "100vh",
       position: "fixed",
       top: 0,
