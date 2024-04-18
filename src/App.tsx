@@ -26,18 +26,19 @@ function App() {
 
   return (
     <div>
-      <h1>スライドメニューの正しいCSS</h1>
-      <p>スライドするサイドメニューを実装するCSSを考えてください。</p>
+      <h1>スライドメニューのCSS</h1>
       <p>
-        まず、何かしらの開閉状態を管理する変数（isOpenとします）を用意しますね。
+        スライドメニューのアニメーションには、positionやmarginを変化させるよりも、transformプロパティを使うのがおすすめです。
       </p>
       <p>
-        isOpenがtrueになると、サイドメニューのpositionを変更しますか？
-        <br />
-        それとも、サイドメニューのmarginをマイナスの状態から0に変更しますか？
+        レンダリング処理が軽量なため、なめらかに表示されます。
+        <a
+          href="https://blog.leap-in.com/lets-learn-how-to-browser-works/"
+          target="_blank"
+        >
+          詳細はこちらのブログがおすすめ
+        </a>
       </p>
-      <p>それらは、私からすると間違った実装です。</p>
-      <p>正しい実装は、translateというCSSを使用することです。</p>
       <p>まずは、デモをご覧ください。</p>
       <div
         css={

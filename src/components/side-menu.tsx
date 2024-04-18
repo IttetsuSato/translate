@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from "react";
 import { SerializedStyles, css } from "@emotion/react";
 
 export const MENU_WIDTH = 600;
-export const DURATION = 500;
+export const DURATION = 400;
 
 type SideMenuProps = {
   slideCss: SerializedStyles;
